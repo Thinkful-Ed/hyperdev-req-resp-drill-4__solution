@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thinkful | Blue Team vs. Read Team</title>
+    <meta name="description" content="A demo solution to Blue team vs. Red team drill from Thinkful's Node course">
+    <link id="favicon" rel="icon" href="https://wow.thinkful.com/static/images/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>blue team vs. red team</h1>
+    </header>
+
+    <main>
+      <div class="js-game-ongoing">
+        <h2>First team to <span class="js-max-score">100</span> wins!</h2>
+        <h3>Current score</h3>
+        <p>Blue: <span class="js-blue-score">0</span> | Red: <span class="js-red-score">0</span></p>
+        
+        <form id="js-game-control">
+          <label for="blue-team">blue team</label><input type="radio" name="team" id="blue-team">
+          <label for="red-team">red team</label><input type="radio" name="team" id="red-team">
+          <label for="points">points</label><input type="number" max=100 min=1 id="points">
+          <button type="submit">Send score</button>
+        </form>
+      </div>
+      <div class="js-game-finished hidden">
+        <p>The <span class="js-winning-team"></span> won.The final score was 
+          <span class="js-winning-score"></span> to <span class="js-losing-score"></span>.
+        </p>
+      </div>
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
